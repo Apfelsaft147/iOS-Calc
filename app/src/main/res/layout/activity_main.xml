@@ -16,7 +16,9 @@
         app:backgroundTint="#00FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:maxImageSize="45sp" />
+        app:maxImageSize="45sp"
+        android:layout_marginStart="12sp"
+        android:layout_marginTop="12sp"/>
 
     <Button
         android:id="@+id/button1"

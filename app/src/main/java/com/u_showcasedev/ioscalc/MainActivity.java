@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTheme(androidx.appcompat.R.style.Theme_AppCompat_DayNight_NoActionBar);
+        setTheme(R.style.Theme_AppCompat_DayNight_NoActionBar1);
         setContentView(R.layout.activity_main);
         viewSetup();
 
