@@ -35,9 +35,8 @@ public class SettingActivity extends AppCompatActivity {
         fdroid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://usowcasedev.infinityfreeapp.com/"));
-                //startActivity(browserIntent);
-                Toast.makeText(SettingActivity.this,"Not avaiable this time",Toast.LENGTH_SHORT).show();
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/u_showcasedev"));
+                startActivity(browserIntent);
             }
         });
 
