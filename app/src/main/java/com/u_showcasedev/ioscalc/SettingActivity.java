@@ -14,6 +14,7 @@ public class SettingActivity extends AppCompatActivity {
 
     private Button website;
     private Button fdroid;
+    private Button github;
     private ImageView back;
 
     @Override
@@ -31,7 +32,7 @@ public class SettingActivity extends AppCompatActivity {
             }
         });
 
-        fdroid = findViewById(R.id.fdroidButton);
+        fdroid = findViewById(R.id.twitterButton);
         fdroid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

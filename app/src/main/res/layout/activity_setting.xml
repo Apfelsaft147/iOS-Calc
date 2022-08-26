@@ -54,7 +54,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/black"
-            android:padding="16dp">
+            android:padding="16dp"
+            app:cardCornerRadius="16sp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -106,7 +107,6 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
                         android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
                         android:layout_marginBottom="16dp"
                         android:backgroundTint="#2C2C2C"
                         android:text="My Website"
@@ -118,12 +118,11 @@
                         app:iconTint="#2596be" />
 
                     <Button
-                        android:id="@+id/fdroidButton"
+                        android:id="@+id/twitterButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
                         android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
                         android:layout_marginBottom="16dp"
                         android:backgroundTint="#2C2C2C"
                         android:text="Twitter"

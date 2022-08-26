@@ -7,10 +7,10 @@ android {
 
     defaultConfig {
         applicationId "com.u_showcasedev.ioscalc"
-        minSdk 21
+        minSdk 25
         targetSdk 32
         versionCode 1
-        versionName "1.0"
+        versionName "0.6"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
