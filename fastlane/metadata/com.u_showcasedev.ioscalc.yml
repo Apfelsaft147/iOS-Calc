@@ -1,0 +1,23 @@
+Categories:
+  - Science & Education
+License: EPL-2.0
+SourceCode: https://github.com/Apfelsaft147/iOS-Calc
+IssueTracker: https://github.com/Apfelsaft147/iOS-Calc/issues
+
+RepoType: git
+Repo: https://github.com/Apfelsaft147/iOS-Calc
+
+Builds:
+  - versionName: '0.6'
+    versionCode: 1
+    commit: 87497b4ed87a6539e404c8c7bca6f258cfca19d9
+    subdir: app
+    sudo:
+      - apt-get update || apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tag
