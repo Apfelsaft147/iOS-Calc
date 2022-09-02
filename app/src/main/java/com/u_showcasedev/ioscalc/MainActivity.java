@@ -1,5 +1,7 @@
 package com.u_showcasedev.ioscalc;
 
+import static java.lang.Double.parseDouble;
+
 import android.content.Intent;
 import android.icu.text.IDNA;
 import android.os.Bundle;
@@ -257,7 +259,7 @@ public class MainActivity extends AppCompatActivity {
         b_para2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -334,6 +336,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void operation() {
         if (!Double.isNaN(val1)) {
+            val2 = parseDouble(t1.getText().toString());
 
             switch (ACTION) {
                 case ADDITION:
@@ -358,7 +361,7 @@ public class MainActivity extends AppCompatActivity {
                     break;
             }
         } else {
-            val1 = Double.parseDouble(t1.getText().toString());
+            val1 = parseDouble(t1.getText().toString());
         }
     }
 
@@ -380,27 +383,27 @@ public class MainActivity extends AppCompatActivity {
             if (inputExpression.contains("-")) {
                 inputExpression = inputExpression.replace("-", "");
                 t2.setText("");
-                val1 = Double.parseDouble(inputExpression);
+                val1 = parseDouble(inputExpression);
             }
             if (inputExpression.contains("+")) {
                 inputExpression = inputExpression.replace("+", "");
                 t2.setText("");
-                val1 = Double.parseDouble(inputExpression);
+                val1 = parseDouble(inputExpression);
             }
             if (inputExpression.contains("/")) {
                 inputExpression = inputExpression.replace("/", "");
                 t2.setText("");
-                val1 = Double.parseDouble(inputExpression);
+                val1 = parseDouble(inputExpression);
             }
             if (inputExpression.contains("%")) {
                 inputExpression = inputExpression.replace("%", "");
                 t2.setText("");
-                val1 = Double.parseDouble(inputExpression);
+                val1 = parseDouble(inputExpression);
             }
             if (inputExpression.contains("×")) {
                 inputExpression = inputExpression.replace("×", "");
                 t2.setText("");
-                val1 = Double.parseDouble(inputExpression);
+                val1 = parseDouble(inputExpression);
             }
         }
     }
