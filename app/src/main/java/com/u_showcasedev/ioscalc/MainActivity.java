@@ -259,7 +259,7 @@ public class MainActivity extends AppCompatActivity {
         b_para2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, " Error ", Toast.LENGTH_SHORT).show();
             }
         });
 
