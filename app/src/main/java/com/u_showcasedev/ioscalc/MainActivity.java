@@ -1,14 +1,20 @@
 package com.u_showcasedev.ioscalc;
 
 import android.content.Intent;
+import android.icu.text.IDNA;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.viewmodel.CreationExtras;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.u_showcasedev.ioscalc.R;
+
+import java.util.EmptyStackException;
 
 public class MainActivity extends AppCompatActivity {
     private final char ADDITION = '+';
@@ -43,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
     private char ACTION;
     private double val1 = Double.NaN;
     private double val2;
+    private Object NullPointerException;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            startActivity(new Intent(MainActivity.this, SettingActivity.class));
+                startActivity(new Intent(MainActivity.this, SettingActivity.class));
             }
         });
 
@@ -253,7 +260,7 @@ public class MainActivity extends AppCompatActivity {
                 if (!t2.getText().toString().isEmpty() || !t1.getText().toString().isEmpty()) {
                     val1 = Double.parseDouble(t1.getText().toString());
                     ACTION = EXTRA;
-                    t2.setText("-" + t1.getText().toString());
+                    t2.setText("" + t1.getText().toString());
                     t1.setText("");
                 } else {
                     t2.setText("Error");
@@ -334,10 +341,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void operation() {
         if (!Double.isNaN(val1)) {
-            if (t2.getText().toString().charAt(0) == '-') {
-                val1 = (-1) * val1;
-            }
-            val2 = Double.parseDouble(t1.getText().toString());
 
             switch (ACTION) {
                 case ADDITION:
