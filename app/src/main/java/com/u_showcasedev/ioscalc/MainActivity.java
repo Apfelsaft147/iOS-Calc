@@ -259,7 +259,11 @@ public class MainActivity extends AppCompatActivity {
         b_para2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, " Error ", Toast.LENGTH_SHORT).show();
+                if (!t2.getText().toString().isEmpty() | !t1.getText().toString().isEmpty()) {
+                    t2.setText("Invalid Value");
+                } else {
+                    t2.setText("Error");
+                }
             }
         });
 
