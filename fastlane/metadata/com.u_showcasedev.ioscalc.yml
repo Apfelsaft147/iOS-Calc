@@ -8,8 +8,8 @@ RepoType: git
 Repo: https://github.com/Apfelsaft147/iOS-Calc
 
 Builds:
-  - versionName: '0.6'
-    versionCode: 1
+  - versionName: '0.8.1'
+    versionCode: 2
     commit: 87497b4ed87a6539e404c8c7bca6f258cfca19d9
     subdir: app
     sudo:
